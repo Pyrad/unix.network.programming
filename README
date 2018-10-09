@@ -7,6 +7,7 @@ Execute the following from the src/ directory:
 
     cd lib         # build the basic library that all programs need
     make           # use "gmake" everywhere on BSD/OS systems
+    [Notice by Pyrad] compile error in inet_ntop.c around line 61, correct "size_t" -> "socklen_t"
 
     cd ../libfree  # continue building the basic library
     make
@@ -20,6 +21,8 @@ Execute the following from the src/ directory:
     cd ../intro    # build and test a basic client program
     make daytimetcpcli
     ./daytimetcpcli 127.0.0.1
+    
+    [Notice by Pyrad] Should "make daytimetcpsrv" first, then "sudo ./daytimetcpsrc", after that, "./daytimetcpcli 127.0.0.1"
 
 If all that works, you're all set to start compiling individual programs.
 
